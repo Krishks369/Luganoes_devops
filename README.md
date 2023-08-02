@@ -43,7 +43,7 @@ firewall-cmd --get-zones
 ```
 - The zones that are already available are ```block dmz drop external home internal nm-shared public trusted work```  
 
-### Let us configure the **trusted**, **internal**, **public** **DMZ** zones ,and test the firewall
+### Let us configure the **trusted**, **internal**, **public**, and **DMZ** zones ,and test the firewall
 
 ## Trusted Zone
 
@@ -51,7 +51,7 @@ Current configuration of the zone can be known by
 ```
 sudo firewall-cmd --zone=trusted --list-all
 ```
-- Since trusted zone is the most protected one there is no permissions given to it. let us assume that only one person is allowed to access via ssh the trusted zone, then that person can be added as source to the zone
+- Since trusted zone is the most protected one there are no permissions given to it. let us assume that only one person is allowed to access via ssh into the trusted zone, then that person can be added as source to the zone
 ```
 sudo firewall-cmd --zone=trusted --add-service=ssh
 ```
