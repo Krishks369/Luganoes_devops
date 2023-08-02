@@ -31,7 +31,7 @@ At this stage firewalld should be running on your device you can check it with `
 Edit the ``` /etc/firewalld/firewalld.conf``` file and set the **firewallbackend** parameter to nftables   
 
 ``` 
-backend = nftables
+firewallbackend = nftables
  ```
 - This confirms that firewalld uses nftables instead of iptables or any others
 
@@ -82,7 +82,7 @@ sudo firewall-cmd --zone=internal --remove-service=samba-client
 ```
 - Adding the subnet of internal network computers as the source so that no intrusion from outside the network happens   
 ```
-sudo firewall-cmd --zone=trusted --add-source=192.168.55.0/24
+sudo firewall-cmd --zone=internal --add-source=192.168.55.0/24
 ```
  
 <img width="313" alt="image" src="https://github.com/Krishks369/Luganodes_devops/assets/71367204/f986989b-a66a-49c0-8275-c97fe43adbf4">   
@@ -148,7 +148,7 @@ sudo firewall-cmd --zone=dmz --add-rich-rule='rule family=ipv4 service name=http
 
 ## Testing the Firewall 
 
-The reference pictures below may not be clear, please feel free to click on it and see
+The reference pictures below may not be clear, please feel free to zoom in and see
 
 - Succesfull SSH into the trusted zone with the permitted IP 
 
@@ -171,7 +171,7 @@ The reference pictures below may not be clear, please feel free to click on it a
 
 <img width="738" alt="image" src="https://github.com/Krishks369/Luganodes_devops/assets/71367204/1060baa3-0ce0-43f1-8a13-267897a102fe">  
 
-- log 
+- log at ```/var/log/syslog```
 
 <img width="470" alt="image" src="https://github.com/Krishks369/Luganodes_devops/assets/71367204/04ed225f-3c67-41df-9745-3318af482077">
 
