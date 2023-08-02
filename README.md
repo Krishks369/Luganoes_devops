@@ -43,7 +43,7 @@ firewall-cmd --get-zones
 ```
 - The zones that are already available are ```block dmz drop external home internal nm-shared public trusted work```  
 
-### Let us configure the **trusted**, **internal**, **public** zones and test the firewall
+### Let us configure the **trusted**, **internal**, **public** **DMZ** zones ,and test the firewall
 
 ## Trusted Zone
 
