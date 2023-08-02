@@ -121,13 +121,13 @@ sudo firewall-cmd --get-active-zones
 Rich rules are custom-made rules for specific purposes, in our case let us make an alert and drop the request when an unauthorized user SSH into the protected device
 
 ```
-sudo firewall-cmd --add-rich-rule='rule family=ipv4 service name=ssh log prefix="Unauthorised SSH dropped" level="notice" drop
+sudo firewall-cmd --add-rich-rule='rule family=ipv4 service name=ssh log prefix="Unauthorised SSH dropped" level="notice" drop'
 ```
 - The above command will be added to the default zone which is public in our case  
 
 <img width="644" alt="image" src="https://github.com/Krishks369/Luganodes_devops/assets/71367204/b2b1ed25-b947-4c5f-bdf3-03762c0e99ff">
 
-### Adding DMZ zone
+### Adding DMZ
 - DMZ zone is where the network is open to the public, so we can give access to HTTP and HTTPS and add rule to log entry of every user.
 
 ```
