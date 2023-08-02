@@ -136,7 +136,7 @@ sudo firewall-cmd --zone=dmz --add-service=http            // add http and https
 sudo firewall-cmd --zone=dmz --add-service=https
 sudo firewall-cmd --zone=dmz --add-source=0.0.0.0/0         // add source as everything
 ```
-Rich rule for logging the entry of user
+- Rich rule for logging the entry of user
 ```
 sudo firewall-cmd --zone=dmz --add-rich-rule='rule family=ipv4 service name=http log prefix="HTTP Entry" level="notice" limit value="1/m" accept'
 ```
@@ -175,5 +175,12 @@ The reference pictures below may not be clear, please feel free to click on it a
 
 <img width="470" alt="image" src="https://github.com/Krishks369/Luganodes_devops/assets/71367204/04ed225f-3c67-41df-9745-3318af482077">
 
+## To apply the changes permanently
+```
+sudo firewall-cmd --runtime-to-permanent
+```
+
+Now all the configuration are applied and will be running even after reboot
+
 ## Conclusion
-This Documentation will help beginners to install and configure firewalld and also will give an idea about how a firewall works
+This Documentation will help beginners to install and configure firewalld and also will give an idea about how a firewall works.
