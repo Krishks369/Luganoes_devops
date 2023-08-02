@@ -18,7 +18,7 @@ sudo apt install firewalld
 ### Start firewalld
 ```  
 sudo systemctl enable firewalld       
-sudo systemctl start firewalls
+sudo systemctl start firewalld
 ```
 
 At this stage firewalld should be running on your device you can check it with ```sudo systemctl status firewalld``` which will show a output like the one below.  
